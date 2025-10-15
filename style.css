@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -9,19 +9,42 @@ body {
   color: #333;
 }
 
-header, nav, aside, footer, .tarjeta, article {
+header,
+nav,
+aside,
+footer,
+.tarjeta,
+article {
   border-radius: 10px;
   padding: 15px;
 }
 
-header, footer {
+header,
+footer {
   color: white;
   text-align: center;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
+header {
+  background-color: #0077b6;
+}
+
+nav {
+  background-color: #90e0ef;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #023e8a;
+  font-weight: 600;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .contenedor {
@@ -62,13 +85,137 @@ main {
   background-color: #f4f6f9;
 }
 
-header { grid-area: header; background-color: #0077b6; }
-nav { grid-area: nav; background-color: #90e0ef; }
-main { grid-area: main; justify-content: space-between; gap: 10px; }
-aside { grid-area: aside; background-color: #caf0f8; }
-footer { grid-area: footer; background-color: #023e8a; }
+.grid-layout header {
+  grid-area: header;
+  background-color: #0077b6;
+}
 
-article {
+.grid-layout nav {
+  grid-area: nav;
+  background-color: #90e0ef;
+}
+
+.grid-layout main {
+  grid-area: main;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.grid-layout aside {
+  grid-area: aside;
+  background-color: #caf0f8;
+}
+
+.grid-layout footer {
+  grid-area: footer;
+  background-color: #023e8a;
+}
+
+.grid-layout article {
   background-color: white;
   border: 2px solid #0077b6;
-  width:
+  width: 100%;
+  text-align: justify;
+}
+
+.pagina-imagenes {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.pagina-imagenes header {
+  background-color: #0077b6;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.imagen {
+  padding: 10px;
+  border: 2px solid cornflowerblue;
+  margin: 5px;
+  background-color: rgb(141, 218, 221);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.pagina-dashboard .dashboard-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #0077b6;
+  color: white;
+  padding: 20px;
+  border-right: 3px solid cornflowerblue;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.contenido {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.tarjetas-dashboard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tarjeta-estadistica {
+  background-color: rgb(141, 218, 221);
+  border: 2px solid cornflowerblue;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  background-color: #023e8a;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
