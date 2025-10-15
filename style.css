@@ -1,3 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f2f6fc;
+  color: #333;
+}
+
+header, nav, aside, footer, .tarjeta, article {
+  border-radius: 10px;
+  padding: 15px;
+}
+
+header, footer {
+  color: white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .contenedor {
   display: flex;
   justify-content: space-around;
@@ -9,12 +35,9 @@
 .tarjeta {
   background-color: rgb(141, 218, 221);
   border: 2px solid cornflowerblue;
-  border-radius: 10px;
-  padding: 20px;
   margin: 10px;
   width: 250px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
 }
 
 .tarjeta h2 {
@@ -25,3 +48,27 @@
   font-size: 15px;
   color: slategray;
 }
+
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f4f6f9;
+}
+
+header { grid-area: header; background-color: #0077b6; }
+nav { grid-area: nav; background-color: #90e0ef; }
+main { grid-area: main; justify-content: space-between; gap: 10px; }
+aside { grid-area: aside; background-color: #caf0f8; }
+footer { grid-area: footer; background-color: #023e8a; }
+
+article {
+  background-color: white;
+  border: 2px solid #0077b6;
+  width:
