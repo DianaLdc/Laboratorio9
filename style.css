@@ -1,0 +1,27 @@
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.tarjeta {
+  background-color: rgb(141, 218, 221);
+  border: 2px solid cornflowerblue;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.tarjeta h2 {
+  color: white;
+}
+
+.tarjeta p {
+  font-size: 15px;
+  color: slategray;
+}
